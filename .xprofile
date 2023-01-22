@@ -1,0 +1,7 @@
+# env_variables
+export XDG_CONFIG_HOME="$HOME/.config"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export BG_IMG="$HOME/.bgimg"
+
+# custom_env_variables
+source "$HOME/.dev-env/.python-pipenv"

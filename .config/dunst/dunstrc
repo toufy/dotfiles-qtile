@@ -1,0 +1,102 @@
+# __                         _                 _                 __     #
+# \ \                     __| |_   _ _ __  ___| |_               \ \    #
+#  \ \ _____ _____ _____ / _` | | | | '_ \/ __| __|____ _____ ____\ \   #
+#   \ \_____|_____|_____| (_| | |_| | | | \__ \ ||_____|_____|_____\ \  #
+#    \_\                 \__,_|\__,_|_| |_|___/\__|                 \_\ #
+
+[global]
+    # ---display--- #
+    # show notification where mouse is
+    follow = mouse
+
+    # ---geometry--- #
+    # can be dynamic: width = (n, m)
+    width = 300
+    height = 300
+    origin = top-right
+    offset = 10x50
+    # auto-detect scale factor
+    scale = 0
+    # no limit
+    notification_limit = 0
+
+    # ---progress bar--- #
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+    # ---style--- #
+    transparency = 25
+    separator_height = 2
+    padding = 10
+    horizontal_padding = 10
+    text_icon_padding = 5
+    # disable frame
+    frame_width = 0
+    separator_color = foreground
+    # sort messages by urgency
+    sort = no
+    # pin notifications if idle for 120 seconds
+    idle_threshold = 120
+
+    # ---text--- #
+    font = "FiraCode Nerd Retina" 10
+    line_height = 0
+    markup = full
+    format = "%a\n\n%s\n%b\n%p"
+    alignment = left
+    vertical_alignment = center
+    # show age after 5 seconds
+    show_age_threshold = 5
+    # ellipsis in long lines
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    # (U) = URL, (A) = action
+    show_indicators = no
+
+    # ---icons--- #
+    icon_position = left
+    # disable scaling small icons
+    min_icon_size = 0
+    # scale larger icons to 64
+    max_icon_size = 64
+
+    # ---history--- #
+    sticky_history = yes
+    history_length = 100
+
+    # ---misc--- #
+    # browser to open urls
+    browser = /usr/bin/librewolf -new-tab
+    # windows spawned by dunst
+    title = Dunst
+    class = Dunst
+    corner_radius = 5
+    # don't allow apps to close notifications
+    ignore_dbusclose = true
+    
+    # ---mouse--- #
+    mouse_left_click = do_action, open_url
+    mouse_middle_click = close_all
+    mouse_right_click = close_current
+
+# ---theme--- #
+[urgency_low]
+    background = "#282a36"
+    foreground = "#6272a4"
+    timeout = 10
+
+[urgency_normal]
+    background = "#282a36"
+    foreground = "#bd93f9"
+    timeout = 10
+
+[urgency_critical]
+    background = "#ff5555"
+    foreground = "#f8f8f2"
+    frame_color = "#ff5555"
+    timeout = 0

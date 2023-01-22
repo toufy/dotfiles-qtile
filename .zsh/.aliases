@@ -1,0 +1,6 @@
+#!/bin/sh
+alias aliases="less ~/.zsh/.aliases"
+alias ls="exa -la --group-directories-first --icons --color always --classify"
+alias termcolors='$HOME/scripts/term-colors/colors.sh'
+alias yay="paru"
+alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
